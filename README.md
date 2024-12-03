@@ -2,7 +2,7 @@
 
 # Hi! I'm iqbal
 
-emula developer who only understands a few codes 
+beginner developer who only understands a few codes 
 > nodejs, javascript, GO, python, bash, nextJS, reactJS, HTML, CSS, tailwind
 #
 If you need help, contact me below.
