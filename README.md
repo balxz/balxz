@@ -5,7 +5,7 @@
 emula developer who only understands a few codes 
 > nodejs, javascript, GO, python, bash, nextJS, reactJS, HTML, CSS, tailwind
 #
-If you need help, please contact me below.
+If you need help, contact me below.
 
 #
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/iqstore78)
