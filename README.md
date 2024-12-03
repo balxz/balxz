@@ -3,9 +3,10 @@
 # Hi! I'm iqbal
 
 emula developer who only understands a few codes 
-# ["nodejs", javascript", "GO", "python", "bash", "nextJS", "reactJS", "HTML", "CSS", "tailwind"]
+> nodejs, javascript, GO, python, bash, nextJS, reactJS, HTML, CSS, tailwind
 If you need help, please contact me below.
-<!-- ## 🌐 Socials: -->
+
+#
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/iqstore78)
  
 <!-- ## 💻 Technical Skills:
@@ -13,7 +14,6 @@ If you need help, please contact me below.
 - **Frontend Development:** HTML/CSS3, JavaScript, Bootstrap :v
 - **Tools and Design:** VSCode, GitHub and Figma -->
 ##
-<!-- snake graph -->
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/github-contribution-grid-snake-dark.svg"/>
@@ -24,9 +24,3 @@ If you need help, please contact me below.
 <br>
 <div align="left">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=balxz&theme=github-compact&radius=16" height="auto" alt="bálxzzy"/>
-
-
-
-
-
-
