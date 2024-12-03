@@ -1,4 +1,4 @@
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=fatkhur03&label=Profile%20views&color=0e75b6&style=flat" alt="" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=balxz&label=Profile%20views&color=0e75b6&style=flat" alt="" /> </p>
 
 # Hi! I'm iqbal
 
