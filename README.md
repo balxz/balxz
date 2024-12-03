@@ -1,8 +1,9 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=fatkhur03&label=Profile%20views&color=0e75b6&style=flat" alt="" /> </p>
 
-# Hi! I'm Fathur
+# Hi! I'm iqbal
 
-emula developer who only understands a few codes ["nodejs", javascript", "GO", "python", "bash", "nextJS", "reactJS", "HTML", "CSS", "tailwind"]
+emula developer who only understands a few codes 
+# ["nodejs", javascript", "GO", "python", "bash", "nextJS", "reactJS", "HTML", "CSS", "tailwind"]
 If you need help, please contact me below.
 <!-- ## 🌐 Socials: -->
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/iqstore78)
