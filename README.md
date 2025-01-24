@@ -1,4 +1,7 @@
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=balxz&label=Profile%20views&color=0e75b6&style=flat" alt="" /> </p>
+<p align="center">
+<img src="https://files.catbox.moe/t5bfhs.jpg">
+</p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=balxz&label=Profile%20views&color=0e75b6&style=flat" alt="" /> </p>
 
 # Hi! I'm iqbal
 
