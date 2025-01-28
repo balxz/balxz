@@ -1,0 +1,38 @@
+name: SH
+on:  
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set output variables
+        id: vars
+        run: |
+          EXTENSIONS=("emojic" "js" "py" "rb" "java" "cpp" "html" "css" "ts" "php" "go" "rs" "kt" "swift" "dart" "lua" "scala" "cs" "xml" "json" "yml" "sql" "sh" "bat" "md")
+          RANDOM_EXTENSION=${EXTENSIONS[$RANDOM % ${#EXTENSIONS[@]}]}
+          FILENAME="./files/${RANDOM}-${RANDOM}.${RANDOM_EXTENSION}"
+          echo "::set-output name=filename::$FILENAME"
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+
+      - uses: "finnp/create-file-action@master"
+        env:
+          FILE_NAME: "${{ steps.vars.outputs.filename }}"
+          FILE_DATA: "SH COMMIT - ${{ steps.vars.outputs.sha_short }}"
+
+      - name: Add and commit changes
+        uses: EndBug/add-and-commit@v7.1.1
+        with:
+          add: "${{ steps.vars.outputs.filename }}"
+          message: "SH"
+          author_name: "GitHub Action"
+          author_email: "actions@github.com"
+        env:
+          GITHUB_TOKEN: "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"
