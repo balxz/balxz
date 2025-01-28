@@ -1,0 +1,51 @@
+name: SH
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  push:
+    branches:
+      - master
+      
+jobs:
+  auto_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DEBUG 
+        run: echo "::debug::Ref = ${{github.ref}}"
+        
+      - uses: actions/checkout@v3      
+        with:
+         persist-credentials: false
+         fetch-depth: 0
+
+      - name: Modify last update
+        run: |
+          d=`date '+%Y-%m-%dT%H:%M:%SZ'`
+          echo $d > SH updated by balxzzy
+          echo $d > Dockerfile updated by balxzzy
+          d=`date '+%Y-%m-%dT%H:%M:%SZ'`
+          echo $d > README.md updated by balxzzy
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "balzz9a@gmail.com"
+          git config --local user.name "balxz"
+          git add -A
+          
+          arr[0]="updated by balxzzy"
+          arr[1]="SH updated by balxzzy"
+          arr[2]="SH updated by balxzzy"
+          arr[3]="updated by balxzzy"
+          arr[4]="updated by balxzzy"
+          arr[5]="SH updated by balxzzy"
+          
+          rand=$[$RANDOM % ${#arr[@]}]
+          
+          git commit -m "${arr[$rand]}"
+          
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          directory: "."
+          github_token: ${{ secrets.HB_TOKEN }}
