@@ -25,7 +25,7 @@ jobs:
           echo $d > SH updated by balxzzy
           echo $d > Dockerfile updated by balxzzy
           d=`date '+%Y-%m-%dT%H:%M:%SZ'`
-          echo $d > README.md updated by balxzzy
+          #echo $d > README.md updated by balxzzy
           
       - name: Commit changes
         run: |
@@ -48,4 +48,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           directory: "."
-          github_token: ${{ secrets.HB_TOKEN }}
+          github_token: "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"
