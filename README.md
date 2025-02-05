@@ -19,13 +19,6 @@ If you need help, contact me below.
 
 
  <p align="center"> <img src="https://awesome-github-stats.azurewebsites.net/user-stats/balxz?cardType=github&theme=github-dark&preferLogin=true" alt=""></img> </p>
- 
- ## 💻 Technical Skills:
-
-- **Frontend Development:** HTML/CSS3, JavaScript, Bootstrap :v
-- **Tools and Design:** VSCode, GitHub and Figma
-
-
   
 <div align="center">
   <picture>
