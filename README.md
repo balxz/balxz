@@ -1,7 +1,11 @@
+
+
 <p align="center">
 <img src="https://files.catbox.moe/te4bg5.jpg">
 </p>
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=balxz&label=Profile%20views&color=0e75b6&style=flat" alt="" /> </p>
+<p align="center">
+ <img src="https://komarev.com/ghpvc/?username=balxz&label=Profile%20views&color=0e75b6&style=flat" alt="" />
+</p>
 
 # Hi! I'm iqbal
 
@@ -12,12 +16,17 @@ If you need help, contact me below.
 
 #
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/iqstore78)
+
+
+ <p align="center"> <img src="https://awesome-github-stats.azurewebsites.net/user-stats/balxz?cardType=github&theme=github-dark&preferLogin=true" alt=""></img> </p>
  
-<!-- ## 💻 Technical Skills:
+ ## 💻 Technical Skills:
 
 - **Frontend Development:** HTML/CSS3, JavaScript, Bootstrap :v
-- **Tools and Design:** VSCode, GitHub and Figma -->
-##
+- **Tools and Design:** VSCode, GitHub and Figma
+
+
+  
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/github-contribution-grid-snake-dark.svg"/>
