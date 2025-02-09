@@ -22,7 +22,7 @@ If you need help, contact me below.
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/iqstore78)
 
 
- <p align="center"> <img src="https://awesome-github-stats.azurewebsites.net/user-stats/balxz?cardType=github&theme=github-dark&preferLogin=true" alt=""></img> </p>
+ <p align="center"> <img src="https://streak-stats.demolab.com?user=balxz&theme=dark&background=000000" alt=""></img> </p>
   
 <div align="center">
   <picture>
@@ -34,3 +34,4 @@ If you need help, contact me below.
 <br>
 <div align="left">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=balxz&theme=github-compact&radius=16" height="auto" alt="bálxzzy"/>
+  
