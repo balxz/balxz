@@ -33,5 +33,5 @@ If you need help, contact me below.
 </div>
 <br>
 <div align="left">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=balxz&theme=github-compact&radius=16" height="auto" alt="bálxzzy"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=balxz&theme=radical&layout=compact" height="auto" alt="bálxzzy"/>
   
