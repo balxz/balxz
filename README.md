@@ -1,9 +1,6 @@
 <!--<p align="center">
   <img src="https://files.catbox.moe/te4bg5.jpg">
 </p>-->
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=balxz&label=Profile%20views&color=0e75b6&style=flat" alt="" />
-</p>
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Open+Sans&duration=1000&pause=500&center=true&width=435&lines=hi+I'm+iqbal;full+stack+enthusiast;open+source+lovers" alt="Typing SVG" /></a>
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=balxz&theme=onedark&row=1&column=7" alt="Trophy" />
@@ -62,6 +59,9 @@
     <img src="/github-contribution-grid-snake.svg" alt="github-snake"/>
   </picture>
 </div>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=balxz&label=Profile%20views&color=0e75b6&style=flat" alt="" />
+</p>
 <div align="center">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=balxz&show_icons=true&theme=radical" />
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=balxz&layout=compact&theme=radical" />
