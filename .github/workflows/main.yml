@@ -1,9 +1,9 @@
-name: Auto Commit Every 5 Minutes
+name: Commit
 
 on:
   schedule:
-    # Runs every 5 minutes
-    - cron: '*/2 * * * *'
+    # Runs every 3 minutes
+    - cron: '*/3 * * * *'
   workflow_dispatch: # Allows manual trigger
 
 jobs:
@@ -15,20 +15,21 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        persist-credentials: true
         
     - name: Configure Git
       run: |
-        git config --global user.name "GitHub Actions Bot"
-        git config --global user.email "actions@github.com"
+        git config --global user.name "balxz"
+        git config --global user.email "balzz9a@gmail.com"
         
     - name: Create or update file
       run: |
         # Create a simple file with timestamp
-        echo "Auto commit at $(date)" >> auto-commits.txt
-        echo "Commit number: $(wc -l < auto-commits.txt 2>/dev/null || echo 1)" >> auto-commits.txt
-        echo "---" >> auto-commits.txt
+        echo "commit at $(date)" >> auto-commits.txt
+        echo "number: $(wc -l < auto-commits.txt 2>/dev/null || echo 1)" >> auto-commits.txt
+        echo "--- balxzzy ---" >> auto-commits.txt
         
-    - name: Generate random date in 2019
+    - name: random date in 2019
       id: random-date
       run: |
         # Generate random date in 2019
@@ -44,7 +45,7 @@ jobs:
         echo "commit_date=$random_date" >> $GITHUB_OUTPUT
         echo "Generated date: $random_date"
         
-    - name: Commit with custom date
+    - name: commit custom date
       run: |
         git add .
         
@@ -54,8 +55,7 @@ jobs:
         
         git commit -m "Auto commit: $(date '+%Y-%m-%d %H:%M:%S') (backdated to ${{ steps.random-date.outputs.commit_date }})"
         
-    - name: Push changes
+    - name: push changes
       run: |
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         git push origin main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
