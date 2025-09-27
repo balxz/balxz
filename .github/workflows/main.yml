@@ -25,9 +25,9 @@ jobs:
     - name: Create or update file
       run: |
         # Create a simple file with timestamp
-        echo "commit at $(date)" >> auto-commits.txt
-        echo "number: $(wc -l < auto-commits.txt 2>/dev/null || echo 1)" >> auto-commits.txt
-        echo "--- balxzzy ---" >> auto-commits.txt
+        echo "commit at $(date)" >> commits.txt
+        echo "number: $(wc -l < commits.txt 2>/dev/null || echo 1)" >> commits.txt
+        echo "--- balxzzy ---" >> commits.txt
         
     - name: random date in 2019
       id: random-date
