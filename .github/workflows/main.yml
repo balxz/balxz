@@ -2,8 +2,8 @@ name: Commit
 
 on:
   schedule:
-    # Runs every 3 minutes
-    - cron: '*/3 * * * *'
+    # Try different approach - every 10 minutes for better reliability
+    - cron: '*/2 * * * *'
   workflow_dispatch: # Allows manual trigger
 
 jobs:
@@ -11,28 +11,49 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Debug - Show current time
+      run: |
+        echo "Current UTC time: $(date)"
+        echo "Timezone: $(date +%Z)"
+        
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
+        fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
-        persist-credentials: true
+        clean: true
+        
+    - name: Debug - Show repo status
+      run: |
+        echo "Current branch: $(git branch --show-current)"
+        echo "Remote URL: $(git remote get-url origin)"
+        ls -la
         
     - name: Configure Git
       run: |
         git config --global user.name "balxz"
         git config --global user.email "balzz9a@gmail.com"
+        git config --list | grep user
         
     - name: Create or update file
       run: |
-        # Create a simple file with timestamp
+        echo "=== Creating file ==="
         echo "commit at $(date)" >> commits.txt
-        echo "$(wc -l < commits.txt 2>/dev/null || echo 1)" >> commits.txt
+        echo "number: $(wc -l < commits.txt 2>/dev/null || echo 1)" >> commits.txt
         echo "--- balxzzy ---" >> commits.txt
+        echo "=== File created ==="
+        cat commits.txt | tail -3
         
-    - name: random date in 2019
+    - name: Debug - Check file changes
+      run: |
+        echo "=== Git status ==="
+        git status
+        echo "=== Git diff ==="
+        git diff
+        
+    - name: Generate random date in 2019
       id: random-date
       run: |
-        # Generate random date in 2019
         start_date="2019-01-01"
         end_date="2019-12-31"
         
@@ -43,19 +64,40 @@ jobs:
         random_date=$(date -d "@$random_timestamp" +"%Y-%m-%d %H:%M:%S")
         
         echo "commit_date=$random_date" >> $GITHUB_OUTPUT
-        echo "Generated date: $random_date"
+        echo "Generated random date: $random_date"
         
-    - name: commit custom date
+    - name: Commit with custom date
       run: |
+        echo "=== Adding files ==="
         git add .
+        git status
         
-        # Set custom date for commit (both author and committer date)
+        echo "=== Committing ==="
         export GIT_AUTHOR_DATE="${{ steps.random-date.outputs.commit_date }}"
         export GIT_COMMITTER_DATE="${{ steps.random-date.outputs.commit_date }}"
         
-        git commit -m "Auto commit: $(date '+%Y-%m-%d %H:%M:%S') (backdated to ${{ steps.random-date.outputs.commit_date }})"
+        git commit -m "Auto commit: $(date '+%Y-%m-%d %H:%M:%S') - backdated to ${{ steps.random-date.outputs.commit_date }}"
+        echo "Commit successful!"
         
-    - name: push changes
+    - name: Debug - Show commit info
       run: |
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-        git push origin main
+        echo "=== Latest commit ==="
+        git log -1 --oneline
+        git log -1 --format="%H %an %ae %ad %cd %s"
+        
+    - name: Push changes
+      run: |
+        echo "=== Pushing to repository ==="
+        git remote -v
+        
+        # Pull first to avoid conflicts
+        git pull origin main --rebase || true
+        
+        # Force push if still conflicts
+        git push origin main || git push origin main --force-with-lease
+        
+        echo "Push successful!"
+        
+    - name: Final debug
+      run: |
+        echo "=== Workflow completed at $(date) ==="
