@@ -2,7 +2,7 @@ name: Commit
 
 on:
   schedule:
-    # Try different approach - every 10 minutes for better reliability
+    # Every 2 minutes
     - cron: '*/2 * * * *'
   workflow_dispatch: # Allows manual trigger
 
@@ -51,32 +51,14 @@ jobs:
         echo "=== Git diff ==="
         git diff
         
-    - name: Generate random date in 2019
-      id: random-date
-      run: |
-        start_date="2019-01-01"
-        end_date="2019-12-31"
-        
-        start_timestamp=$(date -d "$start_date" +%s)
-        end_timestamp=$(date -d "$end_date" +%s)
-        
-        random_timestamp=$(shuf -i $start_timestamp-$end_timestamp -n 1)
-        random_date=$(date -d "@$random_timestamp" +"%Y-%m-%d %H:%M:%S")
-        
-        echo "commit_date=$random_date" >> $GITHUB_OUTPUT
-        echo "Generated random date: $random_date"
-        
-    - name: Commit with custom date
+    - name: Commit with current date
       run: |
         echo "=== Adding files ==="
         git add .
         git status
         
-        echo "=== Committing ==="
-        export GIT_AUTHOR_DATE="${{ steps.random-date.outputs.commit_date }}"
-        export GIT_COMMITTER_DATE="${{ steps.random-date.outputs.commit_date }}"
-        
-        git commit -m "Auto commit: $(date '+%Y-%m-%d %H:%M:%S') - backdated to ${{ steps.random-date.outputs.commit_date }}"
+        echo "=== Committing with current date ==="
+        git commit -m "Auto commit: $(date '+%Y-%m-%d %H:%M:%S')"
         echo "Commit successful!"
         
     - name: Debug - Show commit info
