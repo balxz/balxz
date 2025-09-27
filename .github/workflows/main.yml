@@ -26,7 +26,7 @@ jobs:
       run: |
         # Create a simple file with timestamp
         echo "commit at $(date)" >> commits.txt
-        echo "number: $(wc -l < commits.txt 2>/dev/null || echo 1)" >> commits.txt
+        echo "$(wc -l < commits.txt 2>/dev/null || echo 1)" >> commits.txt
         echo "--- balxzzy ---" >> commits.txt
         
     - name: random date in 2019
