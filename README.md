@@ -50,7 +50,7 @@
 
 ## — github stats
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=balxz&theme=dark&background=000000" alt="">
+  <img src="https://streak-stats.demolab.com?user=balxz&theme=dark&background=transparent" alt="">
 </p>
 <div align="center">
   <picture>
@@ -63,8 +63,8 @@
   <img src="https://komarev.com/ghpvc/?username=balxz&label=Profile%20views&color=0e75b6&style=flat" alt="" />
 </p>
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=balxz&show_icons=true&theme=radical" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=balxz&layout=compact&theme=radical" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=balxz&show_icons=true&theme=transparent" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=balxz&layout=compact&theme=transparent" />
 </div>
 
 ## connect with me
