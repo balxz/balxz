@@ -6,7 +6,7 @@
   <img src="https://github-profile-trophy.vercel.app/?username=balxz&theme=onedark&row=1&column=7" alt="Trophy" />
 </p>
 
-# — tech stack
+### — tech stack
 <div align="center">
 	
   ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
